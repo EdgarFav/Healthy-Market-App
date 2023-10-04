@@ -56,13 +56,12 @@ const createUser = async (
 const loginUser = async (email, password) => {
   const user = await User.findOne({ email });
   if (!user) {
-    return "User is not registered";
+    throw new Error("User is not registered");
   }
-
-  var validatePassword = bcrypt.compare(password, user.password);
+  var validatePassword = await bcrypt.compare(password, user.password);
 
   if (!validatePassword) {
-    return "User or Password is incorrect";
+    throw new Error("User or Password is incorrect");
   }
 
   const token = generateAuthToken(user);
@@ -103,10 +102,8 @@ const deleteUser = async (userId) => {
 
 const fireBase = async (name, email, id) => {
   let mongoUser = await User.findOne({ email: email });
-
   if (!mongoUser) {
     const fullName = name.split(" ");
-
     const user = await addDoc(collection(db, "users"), {
       id,
       name: fullName[0],
