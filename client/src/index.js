@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
-import { axios } from "axios";
+import axios from "axios";
 
 axios.defaults.baseURL =
   process.env.API_URL_AWS ||

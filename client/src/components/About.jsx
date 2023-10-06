@@ -49,7 +49,7 @@ const About = () => {
             <div className="my-5">
               <a
                 className="text-3xl lg:text-4xl font-continuo leading-9 text-green1 pb-4"
-                href="https://github.com/Manu-Andaluz/Healthy-Market-App"
+                href="https://github.com/EdgarFav/Healthy-Market-App"
               >
                 Repositorio GitHub
               </a>
