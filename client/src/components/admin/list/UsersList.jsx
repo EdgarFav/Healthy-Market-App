@@ -15,7 +15,7 @@ export default function UserList() {
   const fetchUsers = async () => {
     try {
       const res = await axios.get(
-        `https://healthy-market-app-production.up.railway.app/users`,
+        `/users`,
         setHeaders()
       );
       setUsers(res.data);
@@ -28,7 +28,7 @@ export default function UserList() {
   const deleteUser = async (userId) => {
     try {
       const res = await axios.delete(
-        `https://healthy-market-app-production.up.railway.app/users/${userId}`,
+        `/users/${userId}`,
         setHeaders()
       );
       const newList = users.filter((item) => item._id !== res.data._id);

@@ -25,7 +25,7 @@ const Summary = () => {
   async function fetchOrders() {
     try {
       const res = await axios.get(
-        `https://healthy-market-app-production.up.railway.app/order/income`,
+        `/order/income`,
         setHeaders()
       );
       setOders(res.data.length);
@@ -37,7 +37,7 @@ const Summary = () => {
   async function fetchUsers() {
     try {
       const res = await axios.get(
-        `https://healthy-market-app-production.up.railway.app/users/income`,
+        `/users/income`,
         setHeaders()
       );
       setUsers(res.data.length);
@@ -49,7 +49,7 @@ const Summary = () => {
   async function fetchTotal() {
     try {
       const res = await axios.get(
-        `https://healthy-market-app-production.up.railway.app/order/income`,
+        `/order/income`,
         setHeaders()
       );
       res.data.sort(compare);

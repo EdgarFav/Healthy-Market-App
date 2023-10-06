@@ -12,7 +12,7 @@ const Transactions = () => {
   const fetchData = async () => {
     try {
       const res = await axios.get(
-        `https://healthy-market-app-production.up.railway.app/order/weekIncome`,
+        `/order/weekIncome`,
         setHeaders()
       );
       setOrders(res.data);

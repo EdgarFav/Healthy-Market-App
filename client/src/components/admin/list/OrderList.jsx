@@ -15,7 +15,7 @@ export default function OrderList() {
   const fetchOrders = async () => {
     try {
       const res = await axios.get(
-        `https://healthy-market-app-production.up.railway.app/order`,
+        `/order`,
         setHeaders()
       );
       setOrders(res.data);
@@ -28,7 +28,7 @@ export default function OrderList() {
   const deleteOrder = async (orderId) => {
     try {
       const res = await axios.delete(
-        `https://healthy-market-app-production.up.railway.app/order/${orderId}`,
+        `/order/${orderId}`,
         setHeaders()
       );
       const newList = oders.filter((item) => item._id !== res.data._id);

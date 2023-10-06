@@ -19,7 +19,7 @@ const CreateUser = () => {
   const createUser = async () => {
     try {
       const res = await axios.post(
-        `https://healthy-market-app-production.up.railway.app/users/createUser`,
+        `/users/createUser`,
         {
           name,
           surname,

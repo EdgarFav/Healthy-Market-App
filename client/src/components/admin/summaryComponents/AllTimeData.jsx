@@ -14,7 +14,7 @@ const AllTimeData = () => {
   const fetchProducts = async () => {
     try {
       const res = await axios.get(
-        `https://healthy-market-app-production.up.railway.app/products`
+        `/products`
       );
       setProducts(res.data);
       setLoading(false);
@@ -26,7 +26,7 @@ const AllTimeData = () => {
   const fetchOrders = async () => {
     try {
       const res = await axios.get(
-        `https://healthy-market-app-production.up.railway.app/order`,
+        `/order`,
         setHeaders()
       );
       setOrders(res.data.length);
@@ -38,7 +38,7 @@ const AllTimeData = () => {
   const fetchUsers = async () => {
     try {
       const res = await axios.get(
-        `https://healthy-market-app-production.up.railway.app/users`
+        `/users`
       );
       setUsers(res.data.length);
     } catch (error) {
@@ -49,7 +49,7 @@ const AllTimeData = () => {
   const fetchIncome = async () => {
     try {
       const res = await axios.get(
-        `https://healthy-market-app-production.up.railway.app/order/allTimeIncome`,
+        `/order/allTimeIncome`,
         setHeaders()
       );
       setIncome(res.data[0]);

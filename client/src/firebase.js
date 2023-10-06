@@ -29,10 +29,7 @@ const singWithGoogle = createAsyncThunk(
     const credential = await GoogleAuthProvider.credentialFromResult(result);
     let token = result.user.accessToken;
     localStorage.setItem("token", token);
-    axios.post(
-      "https://healthy-market-app-production.up.railway.app/users/google",
-      result.user
-    );
+    axios.post("/users/google", result.user);
   }
 );
 
