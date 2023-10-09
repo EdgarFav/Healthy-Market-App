@@ -7,9 +7,9 @@ import { store } from "./store/store";
 import axios from "axios";
 
 axios.defaults.baseURL =
-  process.env.API_URL_AWS ||
-  "https://healthy-market-app-production.up.railway.app" ||
-  "http://localhost:5000";
+  // process.env.API_URL_AWS ||
+  "http://localhost:5000" ||
+  "https://healthy-market-app-production-50fb.up.railway.app/";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
